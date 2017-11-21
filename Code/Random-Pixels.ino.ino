@@ -1,6 +1,8 @@
 // NeoPixel Ring simple sketch (c) 2013 Shae Erisson
 // released under the GPLv3 license to match the rest of the AdaFruit NeoPixel library
 
+//Random-Pixels is based upon the work of Shae Erisson's Neopixel Ring simple sketch
+
 #include <Adafruit_NeoPixel.h>
 
 long randNumber;
@@ -14,6 +16,7 @@ int delayval = 100;
 
 void setup() {
   pixels.begin();
+  randomSeed(analogRead(0));
 }
 
 void loop() {
